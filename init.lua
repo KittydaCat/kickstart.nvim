@@ -135,6 +135,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- [[ My Settings ]]
+
+-- Add goto error
+vim.keymap.set('n', 'gre', function()
+  vim.diagnostic.jump { count = 1, severity = vim.diagnostic.severity.ERROR }
+end, { desc = '[G]oto [E]rror' })
+
+--vim.keymap.set('n', 'gre', function()
+--  vim.diagnostic.jump { count = 1 }
+-- end, { buffer = event.buf, desc = '[G]oto [E]rror' })
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -149,45 +160,6 @@ end
 ---@type vim.Option
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
-
--- [[My LSP Settings]]
--- TODO theses might not actually work
-
--- vim.lsp.enable 'zls'
-
--- [[My Rust Analyzer Settings]]
--- vim.lsp.enable 'rust_analyzer'
-
--- vim.lsp.config('rust_analyzer', {
---   settings = {
---     ['rust-analyzer'] = {
---
---       -- This is rust-analyzer.diagnostics.enable = false
---       --
---       -- diagnostics = {
---       --   enable = false;
---       -- }
---       --
---       -- Todo:
---       --
---       -- rust-analyzer.completion.snippets.custom
---       --
---       -- rust-analyzer.semanticHighlighting
---
---       diagnostics = {
---         disable = {},
---
---         styleLints = {
---           enable = true,
---         },
---       },
---
---       imports = {
---         preferPrelude = true,
---       },
---     },
---   },
--- })
 
 -- [[ Configure and install plugins ]]
 --
