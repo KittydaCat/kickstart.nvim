@@ -1,4 +1,6 @@
-# git clone https://github.com/KittyDaCat/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+# ''' sh
+git clone https://github.com/KittyDaCat/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+'''
 
 # kickstart.nvim
 
