@@ -1,3 +1,15 @@
+
+```sh
+git clone https://github.com/KittydaCat/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+```
+
+# Nvim install
+```
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
+sudo apt install make gcc ripgrep fd-find tree-sitter-cli unzip git xclip neovim
+```
+
 # kickstart.nvim
 
 ## Introduction
